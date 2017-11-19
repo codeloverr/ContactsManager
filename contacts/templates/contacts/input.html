@@ -1,0 +1,73 @@
+{% extends "contacts/default.html" %}
+
+{% block input %}
+    {#  Upper cards for quick input#}
+
+    <div id="search-card">
+
+        <div class=" mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Contact details</h2>
+            </div>
+
+
+            <div class="mdl-card__supporting-text">
+                Enter details of contact you want to search
+                <form action="#">
+
+                    <div id="details">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="sample3">Name</label>
+                        </div>
+                    </div>
+                    <div id="email">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="email">
+                            <label class="mdl-textfield__label" for="sample2">E-mail</label>
+                            <span class="mdl-textfield__error">Enter a valid email!</span>
+                        </div>
+                    </div>
+
+                    <div id="age">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                   id="age">
+                            <label class="mdl-textfield__label" for="sample2">Age</label>
+                            <span class="mdl-textfield__error">Age must be a number!</span>
+                        </div>
+                    </div>
+                    <div id="location">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="city">
+                            <label class="mdl-textfield__label" for="sample3">City</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="state">
+                            <label class="mdl-textfield__label" for="sample3">State</label>
+                        </div>
+                    </div>
+                    <div id="job-details">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="email">
+                            <label class="mdl-textfield__label" for="sample2">Job</label>
+                            <span class="mdl-textfield__error">Job details</span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+        <!-- FAB button with ripple -->
+        <div id="search">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+    </div>
+
+
+{% endblock input %}
