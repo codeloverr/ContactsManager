@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "contacts/default.html" %}
+<!-- Wide card with share menu button -->
+{% block contacts_search_results %}
+
+    <div class="mdl-cell mdl-cell--12-col card-responsive mdl-card mdl-shadow--2dp ">
+        <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Search Results</h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+            searched data
+        </div>
+        <div class="mdl-card--border">
+        </div>
+
+        <div id="contact-details-view">
+            {% for contact in all_contacts %}
+            <div class="mdl-cell mdl-cell--12-col mdl-card card-contacts-details mdl-shadow--6dp">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp table-fullwidth">
+                    <tr>
+                        <td class="mdl-data-table__cell">{{ contact.name }}</td>
+                        <td class="mdl-data-table__cell">{{ contact.email }}</td>
+                        <td class="mdl-data-table__cell">{{ contact.age }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell">{{ contact.city }}</td>
+                        <td class="mdl-data-table__cell">{{ contact.state }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell">{{ contact.job }}</td>
+                    </tr>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+
+{% endblock contacts_search_results %}
