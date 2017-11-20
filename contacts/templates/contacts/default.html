@@ -32,10 +32,14 @@
     </header>
 
     <main class="mdl-layout__content">
-        <div class="page-content">
-            {% block input %}
 
-            {% endblock %}
+        {% block input %}
+
+        {% endblock %}
+        <div id="search-results">
+            {% block contacts_search_results %}
+
+            {% endblock contacts_search_results %}
         </div>
     </main>
 </div>
